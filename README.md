@@ -7,7 +7,6 @@
 
 <br>
 
-<img src="https://github.com/goormthon-Univ/2024_BEOTKKOTTHON_TEAM_4_FE/assets/53892427/c89039ca-a866-452c-b372-79537abbc4d0" width="60%"/>
 <br/><br/>
 
 <b>배포 사이트</b> : https://vacgom.co.kr<br>**(8월 구름톤 제주에서 Grand Open 예정)**
