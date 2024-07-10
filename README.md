@@ -11,7 +11,7 @@
 
 
 ## 👨‍👩‍👧‍👧 Team
-| [노영래](https://github.com/sozerong) | [이태림](https://github.com/dkwkdkwkdkwk) | [황나](https://github.com/bossna0) | [ㅁㅁㅁ]() | [ㅁㅁㅁ]() |
+| [노영래](https://github.com/sozerong) | [이태림](https://github.com/dkwkdkwkdkwk) | [황나영](https://github.com/bossna0) | [ㅁㅁㅁ]() | [ㅁㅁㅁ]() |
 | :----------------------------------------: | :----------------------------------------: | :----------------------------------------: | :----------------------------------------: | :----------------------------------------: |
 | <img width = "300" src ="#"><br>- Team Leader - | <img width = "300" src ="#"> | <img width = "300" src ="#"> | <img width = "300" src ="#"> | <img width = "300" src ="#"> |
 | Project Manager,<br>FullStack Developer | AI Developer | AI Developer | Frontend Developer | Designer |
