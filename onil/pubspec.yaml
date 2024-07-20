@@ -46,8 +46,23 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
-  table_calendar: ^3.0.9
-
+  http: ^1.1.0
+  html: ^0.15.0
+  cp949:
+    git:
+      url: https://github.com/dong-higenis/dart-cp949
+      ref: main
+  permission_handler: 11.0.1
+  path_provider: ^2.0.2
+  shared_preferences: ^2.0.7
+  table_calendar: 3.0.9
+  uuid: 3.0.6
+  drift: 2.1.0
+  dio: 4.0.6
+  provider: 6.0.3
+  sensors: ^2.0.3
+  shake: ^2.1.0
+  rxdart: ^0.27.2
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
