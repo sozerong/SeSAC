@@ -15,6 +15,7 @@
 | AI Developer,<br>FullStack Developer | AI Developer | AI Developer | AI Developer | Designer |
 
 <br>
+
 ### Description
 우리는 AI 기술을 활용한 치매 환자 지원 서비스를 개발하여, <br>
 환자들의 안전을 보장하고 인지 기능을 개선하며, <br>
