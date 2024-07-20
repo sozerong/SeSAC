@@ -35,7 +35,7 @@
 
 
 ### AI Character Design
-<a align="center"><img src="https://github.com/sozerong/dataset/blob/main/%EB%AA%A8%EB%A6%AC%20%EB%94%94%EC%9E%90%EC%9D%B8.jpg" width=400 height=350/><br></a>
+<a align="center"><img src="https://github.com/sozerong/dataset/blob/main/%EB%AA%A8%EB%A6%AC%20%EB%94%94%EC%9E%90%EC%9D%B8.jpg" width=400 height=200/><br></a>
 
 ### Design
 <a align="center"><img src="https://github.com/sozerong/dataset/blob/main/%EB%94%94%EC%9E%90%EC%9D%B81.jpg" width=200 height=300/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/sozerong/dataset/blob/main/%EB%94%94%EC%9E%90%EC%9D%B82.jpg" width=200 height=300/><br></a>
