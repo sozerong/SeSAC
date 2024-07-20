@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>NAVER CLOVA CSR Example</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/csr.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>Clova csr (음성 -> 텍스트 변환)</h1>
+
+    <div class="form-group">
+        <label for="uploadFile">음성파일:</label>
+        <input type="file" id="uploadFile">
+    </div>
+
+    <div class="form-group">
+        <button id="submit">텍스트 변환하기</button>
+    </div>
+
+    <div class="form-group">
+        <textarea id="result" rows="10"></textarea>
+    </div>
+
+    <div id="loadingMessage" class="loading" style="display:none;">
+        텍스트 변환 중...
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $('#submit').click(function() {
+            var formData = new FormData(); 
+            formData.append('file', $('#uploadFile')[0].files[0]);
+
+            // CSRF 토큰 가져오기
+            var csrftoken = getCookie('csrftoken');
+
+            // 로딩 메시지 표시
+            $('#loadingMessage').show();
+            $('#result').val('');
+
+            $.ajax({
+                url: 'stt_convert/',
+                method: 'POST',
+                headers: {
+                    "X-CSRFToken": csrftoken // CSRF 토큰 헤더에 추가
+                },
+                processData: false,
+                contentType: false,
+                data: formData,
+                success: function(data) {
+                    $('#result').val(data.text);
+                    // 로딩 메시지 숨기기
+                    $('#loadingMessage').hide();
+                },
+                error: function(request, status, error) {
+                    alert('Error: ' + error);
+                    // 로딩 메시지 숨기기
+                    $('#loadingMessage').hide();
+                }
+            });            
+        });
+    });
+
+    // CSRF 토큰을 쿠키에서 가져오는 함수
+    function getCookie(name) {
+        var cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            var cookies = document.cookie.split(';');
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = cookies[i].trim();
+                // Does this cookie string begin with the name we want?
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+</script>
+
+</body>
+</html>
