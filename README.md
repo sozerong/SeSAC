@@ -1,6 +1,6 @@
 <br>
 <div align="center">
-  <img src="https://github.com/sozerong/dataset/blob/main/%EC%98%A8%EC%9D%BC.png" width="220" height="193" />
+  <img src="https://github.com/sozerong/dataset/blob/main/%EB%AA%A8%EB%A6%AC3.jpg" width=200 height=180/><br>
   <h3 align="center">온일</h3>
   <p align="center">
     치매환자를 돕는 AI서비스<br>
@@ -31,7 +31,6 @@
 
 
 - #### [AI] 기획서
-- <img src="https://github.com/sozerong/dataset/blob/main/%EB%AA%A8%EB%A6%AC3.jpg" width=150 height=140/><br>
 - &nbsp;<a href="https://calm-cabin-f5c.notion.site/AI-aab3c02394ce4b038f01f27a7b12ac4f?pvs=4">AI 현황</a><br>
 
 
