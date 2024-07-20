@@ -39,7 +39,7 @@
 
 ### Design
 <a align="center"><img src="https://github.com/sozerong/dataset/blob/main/%EB%94%94%EC%9E%90%EC%9D%B81.jpg" width=200 height=300/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/sozerong/dataset/blob/main/%EB%94%94%EC%9E%90%EC%9D%B82.jpg" width=200 height=300/><br></a>
-<a align="center"><img src="https://github.com/sozerong/dataset/blob/main/%EA%B8%B0%EC%B4%88%EB%94%94%EC%9E%90%EC%9D%B8.png" width=300 height=250/></a>
+<a align="center"><img src="https://github.com/sozerong/dataset/blob/main/%EA%B8%B0%EC%B4%88%EB%94%94%EC%9E%90%EC%9D%B8.png" width=600 height=250/></a>
 
 ## 💻 Scenario
 
