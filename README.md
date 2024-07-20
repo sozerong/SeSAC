@@ -46,7 +46,7 @@ API|Develop|Database|Other|
 ```
 - Frontend : flutter
 - Backend : django, djangorestframework
-- Database : firebase
+- Database : Mysql
 - Documentation : Notion
 ```
 <br><br>
