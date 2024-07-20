@@ -35,6 +35,13 @@
 
 
 
+### AI Character Design
+<img src="https://github.com/sozerong/dataset/blob/main/%EB%AA%A8%EB%A6%AC%20%EB%94%94%EC%9E%90%EC%9D%B8.jpg" width=100 height=180/><br>
+
+### Design
+<img src="https://github.com/sozerong/dataset/blob/main/%EB%94%94%EC%9E%90%EC%9D%B81.jpg" width=100 height=180/><br>|<img src="https://github.com/sozerong/dataset/blob/main/%EB%94%94%EC%9E%90%EC%9D%B82.jpg" width=100 height=180/><br>
+
+
 ## 💻 Architecture
 
 
