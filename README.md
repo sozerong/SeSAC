@@ -1,6 +1,6 @@
 <br>
 <div align="center">
-  <img src="https://github.com/sozerong/dataset/blob/main/%EC%98%A8%EC%9D%BC.png" /><br>
+  <img src="https://github.com/sozerong/dataset/blob/main/%EC%98%A8%EC%9D%BC.png" width=400 height=300 /><br>
   <h3 align="center">온일</h3>
   <p align="center">
     치매환자를 돕는 AI서비스<br>
