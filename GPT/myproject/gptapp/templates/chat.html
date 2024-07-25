@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GPT Chat</title>
+    <style>
+        /* 스타일 추가 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #eb9963; /* 진한 주황색 배경 */
+        }
+        #chat-box {
+            max-width: 800px; /* 대화 상자의 너비 증가 */
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            height: 600px; /* 대화 상자의 높이 증가 */
+            overflow-y: auto; /* 스크롤이 필요할 때 자동으로 스크롤 생성 */
+        }
+        .message {
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+        }
+        .user-message {
+            text-align: right;
+            color: rgb(0, 0, 0);
+            flex-direction: row-reverse; /* 사용자의 메시지가 오른쪽에서 시작하게 함 */
+        }
+        .gpt-message {
+            text-align: left;
+            color: green;
+        }
+        .message img {
+            width: 40px; /* 아이콘 크기 */
+            height: 40px;
+            border-radius: 50%; /* 원형 아이콘 */
+            border: 2px solid #ed8f51; /* 아이콘 테두리 색상 (진한 주황색) */
+            margin-right: 10px;
+        }
+        #input-box {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        #input-box input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        #input-box button {
+            padding: 10px 15px;
+            margin-left: 10px;
+            border: none;
+            background-color: #ed8f51; /* 버튼 색상 (진한 주황색) */
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #input-box button:hover {
+            background-color: #FF4500; /* 버튼 hover 색상 (주황색) */
+        }
+    </style>
+</head>
+<body>
+    <div id="chat-box">
+        <div id="messages"></div>
+        <div id="input-box">
+            <input type="text" id="user-input" placeholder="메시지를 입력하세요...">
+            <button onclick="sendMessage()">전송</button>
+        </div>
+    </div>
+    <script>
+        // 초기 인사말 추가
+        function initializeChat() {
+            const initialMessage = "안녕하세요! 모리에요:) 오늘은 어떤 일이 있었나요?😊";
+            addMessage(initialMessage, false);
+        }
+
+        function addMessage(message, user) {
+            const messageElement = document.createElement('div');
+            messageElement.className = 'message ' + (user ? 'user-message' : 'gpt-message');
+
+            if (!user) {
+                const icon = document.createElement('img');
+                icon.src = '/static/mori.jpg'; // AI 아이콘 경로
+                messageElement.appendChild(icon);
+            }
+
+            const textElement = document.createElement('span');
+            textElement.innerText = message;
+            messageElement.appendChild(textElement);
+
+            document.getElementById('messages').appendChild(messageElement);
+        }
+
+        function sendMessage() {
+            const userInput = document.getElementById('user-input');
+            const message = userInput.value;
+            if (!message) return;
+
+            addMessage(message, true);
+
+            fetch('/gptapp/chat/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': getCookie('csrftoken') // CSRF token 설정
+                },
+                body: JSON.stringify({ prompt: message })
+            })
+            .then(response => response.json())
+            .then(data => {
+                addMessage(data.response, false);
+                userInput.value = '';
+            })
+            .catch(error => console.error('Error:', error));
+        }
+
+        function getCookie(name) {
+            let cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                const cookies = document.cookie.split(';');
+                for (let i = 0; i < cookies.length; i++) {
+                    const cookie = cookies[i].trim();
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+
+        // 페이지 로드 시 초기화
+        window.onload = initializeChat;
+    </script>
+</body>
+</html>
